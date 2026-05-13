@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diveline Apnea School — Central Sulawesi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,14 +17,21 @@
 <!-- NAV -->
 <nav id="nav">
     <div class="nav-logo">
-        <a href="index.html"><img src="images/logo.png" alt="Diveline Apnea School"></a>
+        <a href="index.html" class="nav-brand">
+            <img src="images/logo.png" alt="Diveline Apnea School">
+            <div class="nav-brand-text">
+                <span class="nav-brand-name">DIVELINE</span>
+                <span class="nav-brand-sub">APNEA SCHOOL</span>
+            </div>
+        </a>
     </div>
     <div class="hamb" id="hamb" onclick="toggleMenu()">
         <span></span><span></span><span></span>
     </div>
     <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" onclick="closeMenu()" class="nav-active-home" data-en="Home" data-id="Beranda">Home</a></li>
         <li><a href="story.html" onclick="closeMenu()" data-en="Our Story" data-id="Kisah Kami">Our Story</a></li>
-        <li><a href="#philosophy" onclick="closeMenu()" data-en="Philosophy" data-id="Filosofi">Philosophy</a></li>
+        <li><a href="index.html#philosophy" onclick="closeMenu()" data-en="Philosophy" data-id="Filosofi">Philosophy</a></li>
         <li><a href="courses.html" onclick="closeMenu()" data-en="Courses" data-id="Kursus">Courses</a></li>
         <li><a href="https://wa.me/6282291338748" target="_blank" class="nav-dm" data-en="Chat Us" data-id="Hubungi">Chat Us</a></li>
         <li class="lang-toggle">
@@ -42,17 +49,14 @@
     </div>
     <div class="hero-content">
         <div class="hero-eyebrow rv" id="hero-eyebrow">Central Sulawesi, Indonesia</div>
-        <div class="hero-logo-wrap rv d1">
-            <img src="images/logo.png" alt="Diveline Apnea School">
-        </div>
-        <h1 class="hero-head rv d2">BREATHE<br>DEEP</h1>
-        <div class="hero-tagline-wrap rv d3">
+        <h1 class="hero-head rv d1">BREATHE<br>DEEP</h1>
+        <div class="hero-tagline-wrap rv d2">
             <span class="tl-dash"></span>
             <em class="tl-text" id="hero-italic">Every diver has a line. The question is — do you know where yours is?</em>
             <span class="tl-dash"></span>
         </div>
-        <p class="hero-sub rv d4" id="hero-sub">Learn to freedive in the pristine waters of Central Sulawesi.</p>
-        <div class="hero-ctas rv d5">
+        <p class="hero-sub rv d3" id="hero-sub">Learn to freedive in the pristine waters of Central Sulawesi.</p>
+        <div class="hero-ctas rv d4">
             <a href="story.html" class="btn-ghost" id="hc-story">Our Story →</a>
             <a href="courses.html" class="btn-main" id="hc-courses">View Courses</a>
         </div>
