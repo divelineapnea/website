@@ -136,6 +136,10 @@
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 1.25rem 2rem; margin-bottom: 2rem;
 }
+/* Last spec item spans full width if it's the odd one out */
+.course-specs .spec-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
 .spec-item {
     display: flex; align-items: flex-start; gap: .75rem;
 }
