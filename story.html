@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story — Diveline Apnea School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/story.css">
 </head>
@@ -18,12 +18,19 @@
 <!-- NAV -->
 <nav id="nav">
     <div class="nav-logo">
-        <a href="index.html"><img src="images/logo.png" alt="Diveline Apnea School"></a>
+        <a href="index.html" class="nav-brand">
+            <img src="images/logo.png" alt="Diveline Apnea School">
+            <div class="nav-brand-text">
+                <span class="nav-brand-name">DIVELINE</span>
+                <span class="nav-brand-sub">APNEA SCHOOL</span>
+            </div>
+        </a>
     </div>
     <div class="hamb" id="hamb" onclick="toggleMenu()">
         <span></span><span></span><span></span>
     </div>
     <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" onclick="closeMenu()" data-en="Home" data-id="Beranda">Home</a></li>
         <li><a href="story.html" onclick="closeMenu()" class="nav-active" data-en="Our Story" data-id="Kisah Kami">Our Story</a></li>
         <li><a href="index.html#philosophy" onclick="closeMenu()" data-en="Philosophy" data-id="Filosofi">Philosophy</a></li>
         <li><a href="courses.html" onclick="closeMenu()" data-en="Courses" data-id="Kursus">Courses</a></li>
