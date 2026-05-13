@@ -1,0 +1,172 @@
+/* ============================================================
+   DIVELINE — story.css
+   ============================================================ */
+
+/* ---- Story Hero ------------------------------------------ */
+.story-hero {
+    position: relative; z-index: 1;
+    min-height: 65vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10rem 2rem 6rem;
+    overflow: hidden;
+    background: radial-gradient(ellipse 90% 70% at 50% 0%, #0a2540 0%, #020d18 65%);
+    text-align: center;
+}
+
+.story-hero-depth {
+    position: absolute; inset: 0; pointer-events: none;
+    display: flex; justify-content: space-evenly;
+}
+.story-hero-depth span {
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(26,159,170,.07) 40%, rgba(26,159,170,.1) 70%, transparent);
+}
+
+.story-hero-content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 1.5rem;
+    max-width: 700px;
+}
+
+.story-hero-title {
+    font-family: var(--ff-head);
+    font-size: clamp(5rem, 15vw, 11rem);
+    line-height: .88; letter-spacing: .06em;
+    color: var(--white);
+}
+
+.story-hero-tagline {
+    display: flex; align-items: center; gap: 1.2rem;
+    width: 100%;
+}
+
+/* Nav active state */
+.nav-active { color: var(--white) !important; }
+
+/* ---- Timeline -------------------------------------------- */
+.timeline-sec {
+    position: relative; z-index: 1;
+    padding: 7rem 3rem;
+    background: var(--abyss);
+    border-top: 1px solid var(--line);
+}
+
+.timeline-inner {
+    max-width: 900px; margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.tl-item {
+    display: grid;
+    grid-template-columns: 80px 40px 1fr;
+    gap: 0 2rem;
+    padding-bottom: 5rem;
+}
+.tl-item--final { padding-bottom: 0; }
+
+/* Year */
+.tl-year {
+    font-family: var(--ff-head); font-size: 1.5rem;
+    letter-spacing: .04em; color: var(--muted2);
+    padding-top: .1rem; text-align: right;
+    line-height: 1;
+}
+.tl-year--teal { color: var(--teal); }
+
+/* Connector */
+.tl-connector {
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+}
+.tl-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    border: 2px solid var(--muted2); background: var(--abyss);
+    flex-shrink: 0; margin-top: .2rem;
+    transition: border-color .3s;
+}
+.tl-dot--teal { border-color: var(--teal); background: var(--teal); box-shadow: 0 0 16px rgba(26,159,170,.4); }
+.tl-line {
+    width: 1px; flex: 1;
+    background: linear-gradient(to bottom, var(--muted2), transparent);
+    margin-top: .5rem;
+}
+
+/* Body */
+.tl-location {
+    font-family: var(--ff-body); font-size: .7rem;
+    font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: .75rem;
+}
+.tl-title {
+    font-family: var(--ff-head);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: .92; letter-spacing: .03em;
+    color: var(--white); margin-bottom: 1.5rem;
+}
+.tl-text {
+    font-family: var(--ff-serif); font-size: 1.1rem;
+    line-height: 1.8; color: var(--muted);
+    margin-bottom: 1rem; max-width: 60ch;
+}
+.tl-grief {
+    padding: 1.25rem 1.5rem;
+    border-left: 2px solid rgba(26,159,170,.3);
+    background: rgba(26,159,170,.04);
+    border-radius: 0 .25rem .25rem 0;
+    font-style: italic;
+}
+
+.tl-marker {
+    display: inline-flex; align-items: center; gap: .6rem;
+    margin-top: 1.25rem;
+    font-family: var(--ff-body); font-size: .75rem;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted2);
+}
+.tl-marker--teal { color: var(--teal); }
+
+.tl-tag {
+    display: inline-block; margin-top: 1.25rem;
+    padding: .35rem 1rem; border-radius: 2rem;
+    border: 1px solid rgba(26,159,170,.4);
+    font-family: var(--ff-body); font-size: .72rem;
+    letter-spacing: .15em; text-transform: uppercase;
+    color: var(--teal);
+}
+
+/* ---- Story Philosophy Quote ------------------------------ */
+.story-philosophy {
+    position: relative; z-index: 1;
+    padding: 8rem 3rem;
+    background: linear-gradient(to bottom, var(--abyss), var(--ocean));
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+.story-phil-inner { max-width: 700px; margin: 0 auto; }
+
+.story-phil-quote {
+    font-family: var(--ff-serif);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-style: italic; line-height: 1.55;
+    color: var(--white); margin-bottom: 1.5rem;
+}
+.story-phil-attr {
+    font-family: var(--ff-body); font-size: .75rem;
+    letter-spacing: .15em; text-transform: uppercase; color: var(--teal);
+}
+
+/* CTA row */
+.cta-row {
+    display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+}
+
+/* ---- Responsive ------------------------------------------ */
+@media (max-width: 680px) {
+    .tl-item {
+        grid-template-columns: 50px 28px 1fr;
+        gap: 0 1rem;
+    }
+    .tl-year { font-size: 1.1rem; }
+    .timeline-sec { padding: 5rem 1.5rem; }
+    .story-philosophy { padding: 5rem 1.5rem; }
+}
