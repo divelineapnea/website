@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses — Diveline Apnea School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/courses.css">
 </head>
@@ -18,12 +18,19 @@
 <!-- NAV -->
 <nav id="nav">
     <div class="nav-logo">
-        <a href="index.html"><img src="images/logo.png" alt="Diveline Apnea School"></a>
+        <a href="index.html" class="nav-brand">
+            <img src="images/logo.png" alt="Diveline Apnea School">
+            <div class="nav-brand-text">
+                <span class="nav-brand-name">DIVELINE</span>
+                <span class="nav-brand-sub">APNEA SCHOOL</span>
+            </div>
+        </a>
     </div>
     <div class="hamb" id="hamb" onclick="toggleMenu()">
         <span></span><span></span><span></span>
     </div>
     <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" onclick="closeMenu()" data-en="Home" data-id="Beranda">Home</a></li>
         <li><a href="story.html" onclick="closeMenu()" data-en="Our Story" data-id="Kisah Kami">Our Story</a></li>
         <li><a href="index.html#philosophy" onclick="closeMenu()" data-en="Philosophy" data-id="Filosofi">Philosophy</a></li>
         <li><a href="courses.html" onclick="closeMenu()" class="nav-active" data-en="Courses" data-id="Kursus">Courses</a></li>
@@ -139,14 +146,21 @@
                         <span class="spec-icon">↕</span>
                         <div>
                             <strong id="c2-s2-label">Target Depth</strong>
-                            <p id="c2-s2-val">20 m</p>
+                            <p id="c2-s2-val">12 – 16 m</p>
                         </div>
                     </div>
                     <div class="spec-item">
                         <span class="spec-icon">⏱</span>
                         <div>
                             <strong id="c2-s3-label">Static Apnea Target</strong>
-                            <p id="c2-s3-val">1 min 30 sec</p>
+                            <p id="c2-s3-val">2 min 00 sec</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">↔</span>
+                        <div>
+                            <strong id="c2-s4b-label">Dynamic Apnea Target</strong>
+                            <p id="c2-s4b-val">40 m</p>
                         </div>
                     </div>
                     <div class="spec-item">
@@ -160,8 +174,8 @@
                 <a href="https://wa.me/6282291338748?text=Hi%20Izal!%20I%20am%20interested%20in%20AIDA%202." target="_blank" class="course-cta" id="c2-cta">💬 Inquire About AIDA 2</a>
             </div>
             <div class="course-depth-bar">
-                <div class="depth-fill" style="height:50%"></div>
-                <span class="depth-label">20 m</span>
+                <div class="depth-fill" style="height:35%"></div>
+                <span class="depth-label">16 m</span>
             </div>
         </div>
 
@@ -171,7 +185,7 @@
             <div class="course-content">
                 <div class="course-badge course-badge--adv" id="c3-badge">Advanced</div>
                 <h2 class="course-title" id="c3-title">ADVANCED<br>FREEDIVER</h2>
-                <p class="course-desc" id="c3-desc">The deep water discipline. AIDA 3 takes you to 40 metres and develops the advanced skills that separate a safe deep diver from a reckless one. Mouthfill equalization, extended breath-hold, and refined rescue protocols are the foundation of this level — taught in the open sea of Teluk Tomini.</p>
+                <p class="course-desc" id="c3-desc">The deep water discipline. AIDA 3 takes you to 32 metres and develops the advanced skills that separate a safe deep diver from a reckless one. Mouthfill equalization, extended breath-hold, and refined rescue protocols are the foundation of this level — taught in the open sea of Teluk Tomini.</p>
                 <div class="course-specs">
                     <div class="spec-item">
                         <span class="spec-icon">◎</span>
@@ -184,14 +198,21 @@
                         <span class="spec-icon">↕</span>
                         <div>
                             <strong id="c3-s2-label">Target Depth</strong>
-                            <p id="c3-s2-val">40 m</p>
+                            <p id="c3-s2-val">32 m</p>
                         </div>
                     </div>
                     <div class="spec-item">
                         <span class="spec-icon">⏱</span>
                         <div>
                             <strong id="c3-s3-label">Static Apnea Target</strong>
-                            <p id="c3-s3-val">2 min 30 sec</p>
+                            <p id="c3-s3-val">2 min 45 sec</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">↔</span>
+                        <div>
+                            <strong id="c3-s4b-label">Dynamic Apnea Target</strong>
+                            <p id="c3-s4b-val">55 m</p>
                         </div>
                     </div>
                     <div class="spec-item">
@@ -205,8 +226,8 @@
                 <a href="https://wa.me/6282291338748?text=Hi%20Izal!%20I%20am%20interested%20in%20AIDA%203." target="_blank" class="course-cta course-cta--adv" id="c3-cta">💬 Inquire About AIDA 3</a>
             </div>
             <div class="course-depth-bar">
-                <div class="depth-fill depth-fill--adv" style="height:90%"></div>
-                <span class="depth-label depth-label--adv">40 m</span>
+                <div class="depth-fill depth-fill--adv" style="height:80%"></div>
+                <span class="depth-label depth-label--adv">32 m</span>
             </div>
         </div>
 
