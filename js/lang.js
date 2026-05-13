@@ -98,16 +98,18 @@ const T = {
         c2Title: "CERTIFIED<br>FREEDIVER",
         c2Desc: "Your first internationally recognized freediving certification. AIDA 2 introduces open water diving with established performance targets. You will develop static apnea, dynamic apnea, and the foundations of safe deep diving — with theory sessions, pool work, and open water dives in the waters of Bunta.",
         c2S1Label: "Prerequisites", c2S1Val: "AIDA 1 or equivalent experience",
-        c2S2Label: "Target Depth", c2S2Val: "20 m",
-        c2S3Label: "Static Apnea Target", c2S3Val: "1 min 30 sec",
+        c2S2Label: "Target Depth", c2S2Val: "12 – 16 m",
+        c2S3Label: "Static Apnea Target", c2S3Val: "2 min 00 sec",
+        c2S4bLabel: "Dynamic Apnea Target", c2S4bVal: "40 m",
         c2S4Label: "You will learn", c2S4Val: "Freefall, equalization to depth, rescue techniques, safety protocol",
         c2Cta: "💬 Inquire About AIDA 2",
         c3Badge: "Advanced",
         c3Title: "ADVANCED<br>FREEDIVER",
-        c3Desc: "The deep water discipline. AIDA 3 takes you to 40 metres and develops the advanced skills that separate a safe deep diver from a reckless one. Mouthfill equalization, extended breath-hold, and refined rescue protocols are the foundation of this level — taught in the open sea of Teluk Tomini.",
+        c3Desc: "The deep water discipline. AIDA 3 takes you to 32 metres and develops the advanced skills that separate a safe deep diver from a reckless one. Mouthfill equalization, extended breath-hold, and refined rescue protocols are the foundation of this level — taught in the open sea of Teluk Tomini.",
         c3S1Label: "Prerequisites", c3S1Val: "AIDA 2 certification",
-        c3S2Label: "Target Depth", c3S2Val: "40 m",
-        c3S3Label: "Static Apnea Target", c3S3Val: "2 min 30 sec",
+        c3S2Label: "Target Depth", c3S2Val: "32 m",
+        c3S3Label: "Static Apnea Target", c3S3Val: "2 min 45 sec",
+        c3S4bLabel: "Dynamic Apnea Target", c3S4bVal: "55 m",
         c3S4Label: "You will learn", c3S4Val: "Mouthfill equalization, no-fins technique, deep rescue, advanced theory",
         c3Cta: "💬 Inquire About AIDA 3",
         safetyTitle: "Safety is not a module — it is the methodology.",
@@ -216,16 +218,18 @@ const T = {
         c2Title: "FREEDIVER<br>BERSERTIFIKAT",
         c2Desc: "Sertifikasi freediving internasional pertamamu. AIDA 2 memperkenalkan selaman air terbuka dengan target performa yang ditetapkan. Kamu akan mengembangkan static apnea, dynamic apnea, dan fondasi selaman dalam yang aman — dengan sesi teori, latihan kolam, dan selaman air terbuka di perairan Bunta.",
         c2S1Label: "Prasyarat", c2S1Val: "AIDA 1 atau pengalaman setara",
-        c2S2Label: "Target Kedalaman", c2S2Val: "20 m",
-        c2S3Label: "Target Static Apnea", c2S3Val: "1 menit 30 detik",
+        c2S2Label: "Target Kedalaman", c2S2Val: "12 – 16 m",
+        c2S3Label: "Target Static Apnea", c2S3Val: "2 menit 00 detik",
+        c2S4bLabel: "Target Dynamic Apnea", c2S4bVal: "40 m",
         c2S4Label: "Yang akan dipelajari", c2S4Val: "Freefall, ekualisasi ke kedalaman, teknik penyelamatan, protokol keselamatan",
         c2Cta: "💬 Tanya Tentang AIDA 2",
         c3Badge: "Lanjutan",
         c3Title: "FREEDIVER<br>LANJUTAN",
-        c3Desc: "Disiplin air dalam. AIDA 3 membawamu ke 40 meter dan mengembangkan keterampilan lanjutan yang membedakan penyelam dalam yang aman dari yang ceroboh. Ekualisasi mouthfill, menahan napas yang lebih lama, dan protokol penyelamatan yang disempurnakan adalah fondasi level ini — diajarkan di laut terbuka Teluk Tomini.",
+        c3Desc: "Disiplin air dalam. AIDA 3 membawamu ke 32 meter dan mengembangkan keterampilan lanjutan yang membedakan penyelam dalam yang aman dari yang ceroboh. Ekualisasi mouthfill, menahan napas yang lebih lama, dan protokol penyelamatan yang disempurnakan adalah fondasi level ini — diajarkan di laut terbuka Teluk Tomini.",
         c3S1Label: "Prasyarat", c3S1Val: "Sertifikasi AIDA 2",
-        c3S2Label: "Target Kedalaman", c3S2Val: "40 m",
-        c3S3Label: "Target Static Apnea", c3S3Val: "2 menit 30 detik",
+        c3S2Label: "Target Kedalaman", c3S2Val: "32 m",
+        c3S3Label: "Target Static Apnea", c3S3Val: "2 menit 45 detik",
+        c3S4bLabel: "Target Dynamic Apnea", c3S4bVal: "55 m",
         c3S4Label: "Yang akan dipelajari", c3S4Val: "Ekualisasi mouthfill, teknik no-fins, penyelamatan dalam, teori lanjutan",
         c3Cta: "💬 Tanya Tentang AIDA 3",
         safetyTitle: "Keselamatan bukan sebuah modul — itu adalah metodologinya.",
@@ -340,12 +344,14 @@ function setL(lang) {
     set('c2-s1-label', t.c2S1Label); set('c2-s1-val', t.c2S1Val);
     set('c2-s2-label', t.c2S2Label); set('c2-s2-val', t.c2S2Val);
     set('c2-s3-label', t.c2S3Label); set('c2-s3-val', t.c2S3Val);
+    set('c2-s4b-label', t.c2S4bLabel); set('c2-s4b-val', t.c2S4bVal);
     set('c2-s4-label', t.c2S4Label); set('c2-s4-val', t.c2S4Val);
     set('c2-cta', t.c2Cta);
     set('c3-badge', t.c3Badge); set('c3-title', t.c3Title, true); set('c3-desc', t.c3Desc);
     set('c3-s1-label', t.c3S1Label); set('c3-s1-val', t.c3S1Val);
     set('c3-s2-label', t.c3S2Label); set('c3-s2-val', t.c3S2Val);
     set('c3-s3-label', t.c3S3Label); set('c3-s3-val', t.c3S3Val);
+    set('c3-s4b-label', t.c3S4bLabel); set('c3-s4b-val', t.c3S4bVal);
     set('c3-s4-label', t.c3S4Label); set('c3-s4-val', t.c3S4Val);
     set('c3-cta', t.c3Cta);
     set('safety-title', t.safetyTitle);
