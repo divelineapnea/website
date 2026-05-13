@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story — Diveline Apnea School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/story.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+<canvas id="bcanvas"></canvas>
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nav-logo">
+        <a href="index.html"><img src="images/logo.png" alt="Diveline Apnea School"></a>
+    </div>
+    <div class="hamb" id="hamb" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="story.html" onclick="closeMenu()" class="nav-active" data-en="Our Story" data-id="Kisah Kami">Our Story</a></li>
+        <li><a href="index.html#philosophy" onclick="closeMenu()" data-en="Philosophy" data-id="Filosofi">Philosophy</a></li>
+        <li><a href="courses.html" onclick="closeMenu()" data-en="Courses" data-id="Kursus">Courses</a></li>
+        <li><a href="https://wa.me/6282291338748" target="_blank" class="nav-dm" data-en="Chat Us" data-id="Hubungi">Chat Us</a></li>
+        <li class="lang-toggle">
+            <button class="lb on" id="btnEN" onclick="setL('en')">EN</button>
+            <span class="lb-div">|</span>
+            <button class="lb" id="btnID" onclick="setL('id')">ID</button>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO KECIL -->
+<section class="story-hero">
+    <div class="story-hero-depth">
+        <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="story-hero-content">
+        <div class="sec-label rv" data-en="The Line" data-id="Garis Batas">The Line</div>
+        <h1 class="story-hero-title rv d1">THE LINE</h1>
+        <div class="story-hero-tagline rv d2">
+            <span class="tl-dash"></span>
+            <em class="tl-text" id="story-hero-tagline">The line between depth and danger is invisible — until someone teaches you where it is.</em>
+            <span class="tl-dash"></span>
+        </div>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-sec">
+    <div class="timeline-inner">
+        <div class="sec-label rv" data-en="The Journey" data-id="Perjalanan">The Journey</div>
+
+        <!-- 2013 -->
+        <div class="tl-item rv">
+            <div class="tl-year">2013</div>
+            <div class="tl-connector">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-body">
+                <h3 class="tl-location" id="tl1-loc">Bunta, Sulawesi Tengah</h3>
+                <h2 class="tl-title" id="tl1-title">THE WATERS<br>OF HOME</h2>
+                <p class="tl-text" id="tl1-text">Before freediving had a name in his world, Izal Mangantjo was already living it — spearfishing the reefs of Bunta with his friends. These were not dives born from sport or ambition. They were survival, tradition, and belonging.</p>
+                <p class="tl-text tl-grief" id="tl1-grief">But the waters took people. Friends who dove too deep without the knowledge to come back safely. There were no safety protocols, no trained divers, no one who knew the line. The ocean did not forgive ignorance. And Izal could not forgive himself for not knowing how to help.</p>
+                <div class="tl-marker" id="tl1-marker">
+                    <span>⚑</span> <span id="tl1-marker-text">The vow was made here.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="tl-item rv d1">
+            <div class="tl-year">2014</div>
+            <div class="tl-connector">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-body">
+                <h3 class="tl-location" id="tl2-loc">Fusion Freediving, Bali</h3>
+                <h2 class="tl-title" id="tl2-title">THE FIRST<br>DESCENT</h2>
+                <p class="tl-text" id="tl2-text">He traveled to Bali and enrolled in his first certified freediving course at Fusion Freediving — training under international instructors who showed him what freediving truly looked like when done with knowledge, structure, and care.</p>
+                <p class="tl-text" id="tl2-text2">AIDA 2. A beginning. But more than a certification — it was a revelation. The ocean he had always known now had language. Safety had a form. And for the first time, he understood what he had been missing.</p>
+                <div class="tl-tag" id="tl2-tag">AIDA 2 Certified</div>
+            </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="tl-item rv d1">
+            <div class="tl-year">2022</div>
+            <div class="tl-connector">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+            </div>
+            <div class="tl-body">
+                <h3 class="tl-location" id="tl3-loc">LetsFreedive — Coach Jason Hakim</h3>
+                <h2 class="tl-title" id="tl3-title">THE MENTOR<br>WHO CHANGED IT</h2>
+                <p class="tl-text" id="tl3-text">Years later, Izal found Coach Jason Hakim — himself an Indonesian, a fellow spearfisherman, and one of the most respected freediving educators in Southeast Asia. This was not just advanced training. It was recognition: someone who looked like him, dove like him, understood him.</p>
+                <p class="tl-text" id="tl3-text2">Under Coach Jason's guidance at LetsFreedive, Izal progressed from AIDA 3 through to Instructor level. Three lessons he will never forget: <em id="tl3-lessons">discipline, honesty, perseverance.</em></p>
+                <div class="tl-tag" id="tl3-tag">AIDA 3 → Instructor Candidate</div>
+            </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="tl-item rv d1 tl-item--final">
+            <div class="tl-year tl-year--teal">2025</div>
+            <div class="tl-connector">
+                <div class="tl-dot tl-dot--teal"></div>
+            </div>
+            <div class="tl-body">
+                <h3 class="tl-location" id="tl4-loc">Bunta, Sulawesi Tengah</h3>
+                <h2 class="tl-title" id="tl4-title">DIVELINE<br>IS BORN</h2>
+                <p class="tl-text" id="tl4-text">He came home. With his AIDA Instructor certification, and with every lesson from every dive and every loss held carefully in his hands, Izal Mangantjo founded Diveline Apnea School.</p>
+                <p class="tl-text" id="tl4-text2">Not to build a business. To complete a vow. So that the friends and families of eastern and central Indonesia would never again stand at the edge of something infinite without the knowledge to enter it safely.</p>
+                <div class="tl-marker tl-marker--teal" id="tl4-marker">
+                    <span>◎</span> <span id="tl4-marker-text">AIDA Certified Instructor. Diveline opens.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PHILOSOPHY QUOTE -->
+<section class="story-philosophy">
+    <div class="story-phil-inner">
+        <blockquote class="story-phil-quote rv" id="story-phil-quote">
+            "Freediving is not just about holding your breath — it is about finding stillness within yourself."
+        </blockquote>
+        <p class="story-phil-attr rv d1">— Izal Mangantjo, AIDA Instructor</p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+    <div class="cta-inner">
+        <h2 class="cta-head rv" id="cta-head">READY TO<br>BEGIN YOURS?</h2>
+        <p class="cta-sub rv d1" id="cta-sub">Every diver has a story. Yours starts with a single breath.</p>
+        <div class="cta-row rv d2">
+            <a href="courses.html" class="btn-ghost" id="cta-courses">View Courses →</a>
+            <a href="https://wa.me/6282291338748" target="_blank" class="cta-btn" id="cta-wa">💬 WhatsApp Instructor</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="ft-inner">
+        <div class="ft-brand">DIVELINE <em>APNEA SCHOOL</em></div>
+        <div class="ft-links">
+            <a href="index.html" data-en="Home" data-id="Beranda">Home</a>
+            <a href="courses.html" data-en="Courses" data-id="Kursus">Courses</a>
+            <a href="https://www.instagram.com/diveline.apneaschool" target="_blank">Instagram</a>
+        </div>
+        <div class="ft-copy">© 2025 Diveline Apnea School · Bunta, Sulawesi Tengah</div>
+    </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

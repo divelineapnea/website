@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses — Diveline Apnea School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+<canvas id="bcanvas"></canvas>
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nav-logo">
+        <a href="index.html"><img src="images/logo.png" alt="Diveline Apnea School"></a>
+    </div>
+    <div class="hamb" id="hamb" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="story.html" onclick="closeMenu()" data-en="Our Story" data-id="Kisah Kami">Our Story</a></li>
+        <li><a href="index.html#philosophy" onclick="closeMenu()" data-en="Philosophy" data-id="Filosofi">Philosophy</a></li>
+        <li><a href="courses.html" onclick="closeMenu()" class="nav-active" data-en="Courses" data-id="Kursus">Courses</a></li>
+        <li><a href="https://wa.me/6282291338748" target="_blank" class="nav-dm" data-en="Chat Us" data-id="Hubungi">Chat Us</a></li>
+        <li class="lang-toggle">
+            <button class="lb on" id="btnEN" onclick="setL('en')">EN</button>
+            <span class="lb-div">|</span>
+            <button class="lb" id="btnID" onclick="setL('id')">ID</button>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO KECIL -->
+<section class="courses-hero">
+    <div class="courses-hero-depth">
+        <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="courses-hero-content">
+        <div class="sec-label rv" data-en="AIDA Certified Courses" data-id="Kursus Bersertifikat AIDA">AIDA Certified Courses</div>
+        <h1 class="courses-hero-title rv d1" id="courses-hero-title">FIND YOUR<br>DEPTH</h1>
+        <div class="courses-hero-tagline rv d2">
+            <span class="tl-dash"></span>
+            <em class="tl-text" id="courses-hero-tagline">Three levels. One ocean. Your line starts here.</em>
+            <span class="tl-dash"></span>
+        </div>
+    </div>
+</section>
+
+<!-- NUMBERS BAR -->
+<div class="numbers-bar">
+    <div class="nb-item rv">
+        <span class="nb-num">3</span>
+        <span class="nb-label" data-en="AIDA Levels" data-id="Level AIDA">AIDA Levels</span>
+    </div>
+    <div class="nb-divider"></div>
+    <div class="nb-item rv d1">
+        <span class="nb-num">1</span>
+        <span class="nb-label" data-en="Certified Instructor" data-id="Instruktur Bersertifikat">Certified Instructor</span>
+    </div>
+    <div class="nb-divider"></div>
+    <div class="nb-item rv d2">
+        <span class="nb-num">∞</span>
+        <span class="nb-label" data-en="Depth Awaits" data-id="Kedalaman Menanti">Depth Awaits</span>
+    </div>
+</div>
+
+<!-- COURSE CARDS -->
+<section class="courses-sec">
+    <div class="courses-inner">
+        <div class="sec-label rv" data-en="Choose Your Level" data-id="Pilih Level Anda">Choose Your Level</div>
+
+        <!-- AIDA 1 -->
+        <div class="course-card rv">
+            <div class="course-level">AIDA 1</div>
+            <div class="course-content">
+                <div class="course-badge" id="c1-badge">Intro</div>
+                <h2 class="course-title" id="c1-title">INTRO TO<br>FREEDIVING</h2>
+                <p class="course-desc" id="c1-desc">Your first real breath underwater. AIDA 1 is a one-day introductory course designed for complete beginners — no experience required. You will learn the fundamentals of freediving theory, breathing technique, and water safety in a pool or confined water setting.</p>
+                <div class="course-specs">
+                    <div class="spec-item">
+                        <span class="spec-icon">◎</span>
+                        <div>
+                            <strong id="c1-s1-label">Prerequisites</strong>
+                            <p id="c1-s1-val">None. Swim comfortably.</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">↕</span>
+                        <div>
+                            <strong id="c1-s2-label">Depth</strong>
+                            <p id="c1-s2-val">Not required — pool setting</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">⏱</span>
+                        <div>
+                            <strong id="c1-s3-label">Duration</strong>
+                            <p id="c1-s3-val">1 day</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">✓</span>
+                        <div>
+                            <strong id="c1-s4-label">You will learn</strong>
+                            <p id="c1-s4-val">Breathe-up, equalization basics, buddy system, rescue intro</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6282291338748?text=Hi%20Izal!%20I%20am%20interested%20in%20AIDA%201." target="_blank" class="course-cta" id="c1-cta">💬 Inquire About AIDA 1</a>
+            </div>
+            <div class="course-depth-bar">
+                <div class="depth-fill" style="height:20%"></div>
+                <span class="depth-label">Beginner</span>
+            </div>
+        </div>
+
+        <!-- AIDA 2 -->
+        <div class="course-card course-card--mid rv d1">
+            <div class="course-level">AIDA 2</div>
+            <div class="course-content">
+                <div class="course-badge course-badge--mid" id="c2-badge">Certified</div>
+                <h2 class="course-title" id="c2-title">CERTIFIED<br>FREEDIVER</h2>
+                <p class="course-desc" id="c2-desc">Your first internationally recognized freediving certification. AIDA 2 introduces open water diving with established performance targets. You will develop static apnea, dynamic apnea, and the foundations of safe deep diving — with theory sessions, pool work, and open water dives in the waters of Bunta.</p>
+                <div class="course-specs">
+                    <div class="spec-item">
+                        <span class="spec-icon">◎</span>
+                        <div>
+                            <strong id="c2-s1-label">Prerequisites</strong>
+                            <p id="c2-s1-val">AIDA 1 or equivalent experience</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">↕</span>
+                        <div>
+                            <strong id="c2-s2-label">Target Depth</strong>
+                            <p id="c2-s2-val">20 m</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">⏱</span>
+                        <div>
+                            <strong id="c2-s3-label">Static Apnea Target</strong>
+                            <p id="c2-s3-val">1 min 30 sec</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">✓</span>
+                        <div>
+                            <strong id="c2-s4-label">You will learn</strong>
+                            <p id="c2-s4-val">Freefall, equalization to depth, rescue techniques, safety protocol</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6282291338748?text=Hi%20Izal!%20I%20am%20interested%20in%20AIDA%202." target="_blank" class="course-cta" id="c2-cta">💬 Inquire About AIDA 2</a>
+            </div>
+            <div class="course-depth-bar">
+                <div class="depth-fill" style="height:50%"></div>
+                <span class="depth-label">20 m</span>
+            </div>
+        </div>
+
+        <!-- AIDA 3 -->
+        <div class="course-card course-card--adv rv d2">
+            <div class="course-level">AIDA 3</div>
+            <div class="course-content">
+                <div class="course-badge course-badge--adv" id="c3-badge">Advanced</div>
+                <h2 class="course-title" id="c3-title">ADVANCED<br>FREEDIVER</h2>
+                <p class="course-desc" id="c3-desc">The deep water discipline. AIDA 3 takes you to 40 metres and develops the advanced skills that separate a safe deep diver from a reckless one. Mouthfill equalization, extended breath-hold, and refined rescue protocols are the foundation of this level — taught in the open sea of Teluk Tomini.</p>
+                <div class="course-specs">
+                    <div class="spec-item">
+                        <span class="spec-icon">◎</span>
+                        <div>
+                            <strong id="c3-s1-label">Prerequisites</strong>
+                            <p id="c3-s1-val">AIDA 2 certification</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">↕</span>
+                        <div>
+                            <strong id="c3-s2-label">Target Depth</strong>
+                            <p id="c3-s2-val">40 m</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">⏱</span>
+                        <div>
+                            <strong id="c3-s3-label">Static Apnea Target</strong>
+                            <p id="c3-s3-val">2 min 30 sec</p>
+                        </div>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-icon">✓</span>
+                        <div>
+                            <strong id="c3-s4-label">You will learn</strong>
+                            <p id="c3-s4-val">Mouthfill equalization, no-fins technique, deep rescue, advanced theory</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6282291338748?text=Hi%20Izal!%20I%20am%20interested%20in%20AIDA%203." target="_blank" class="course-cta course-cta--adv" id="c3-cta">💬 Inquire About AIDA 3</a>
+            </div>
+            <div class="course-depth-bar">
+                <div class="depth-fill depth-fill--adv" style="height:90%"></div>
+                <span class="depth-label depth-label--adv">40 m</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SAFETY NOTE -->
+<section class="safety-sec">
+    <div class="safety-inner rv">
+        <div class="safety-icon">⊕</div>
+        <div>
+            <h3 class="safety-title" id="safety-title">Safety is not a module — it is the methodology.</h3>
+            <p class="safety-body" id="safety-body">Every Diveline course is built around AIDA's international safety standards, reinforced by Izal's personal experience of what happens when those standards are absent. You will learn rescue, buddy protocols, and emergency procedures in every level — not as an afterthought, but as the foundation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+    <div class="cta-inner">
+        <h2 class="cta-head rv" id="cta-head">NOT SURE<br>WHERE TO START?</h2>
+        <p class="cta-sub rv d1" id="cta-sub">Message Izal directly. He will help you find the right level — honestly, not ambitiously.</p>
+        <a href="https://wa.me/6282291338748" target="_blank" class="cta-btn rv d2" id="cta-wa">💬 WhatsApp Instructor</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="ft-inner">
+        <div class="ft-brand">DIVELINE <em>APNEA SCHOOL</em></div>
+        <div class="ft-links">
+            <a href="index.html" data-en="Home" data-id="Beranda">Home</a>
+            <a href="story.html" data-en="Our Story" data-id="Kisah Kami">Our Story</a>
+            <a href="https://www.instagram.com/diveline.apneaschool" target="_blank">Instagram</a>
+        </div>
+        <div class="ft-copy">© 2025 Diveline Apnea School · Bunta, Sulawesi Tengah</div>
+    </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
