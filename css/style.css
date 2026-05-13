@@ -93,7 +93,30 @@ img { display: block; max-width: 100%; }
     border-bottom: 1px solid var(--line);
 }
 
-.nav-logo img { height: 48px; filter: invert(1) brightness(1.5); }
+.nav-logo img { height: 54px; filter: invert(1) brightness(2); }
+
+/* Brand logo + text combo */
+.nav-brand {
+    display: flex; align-items: center; gap: .9rem;
+    text-decoration: none;
+}
+.nav-brand-text {
+    display: flex; flex-direction: column; gap: 4px;
+    border-left: 1px solid rgba(240,236,228,.2);
+    padding-left: .9rem;
+}
+.nav-brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem; font-weight: 600;
+    letter-spacing: .2em;
+    color: var(--white); line-height: 1;
+}
+.nav-brand-sub {
+    font-family: 'Cinzel', serif;
+    font-size: .62rem; font-weight: 400;
+    letter-spacing: .32em; text-transform: uppercase;
+    color: var(--teal); line-height: 1;
+}
 
 .nav-links {
     display: flex; align-items: center; gap: 2.5rem;
@@ -233,12 +256,6 @@ img { display: block; max-width: 100%; }
     font-family: var(--ff-body); font-size: .7rem;
     font-weight: 500; letter-spacing: .3em; text-transform: uppercase;
     color: var(--teal);
-}
-
-.hero-logo-wrap img {
-    height: 100px;
-    filter: invert(1) brightness(2);
-    opacity: .9;
 }
 
 .hero-head {
@@ -552,6 +569,9 @@ footer {
 @media (max-width: 900px) {
     #nav { padding: 1rem 1.5rem; }
     #nav.stuck { padding: .75rem 1.5rem; }
+
+    /* Hide brand text on small screens, keep logo */
+    .nav-brand-text { display: none; }
 
     .nav-links {
         position: fixed; top: 0; right: 0; bottom: 0;
